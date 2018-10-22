@@ -1,0 +1,35 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ScannerActivity">
+<FrameLayout
+     android:id="@+id/scan_header_layout"
+     android:layout_width="fill_parent"
+     android:layout_height="86dp"
+     android:background="@color/theme_primary"
+     android:paddingLeft="32dp"
+     android:paddingRight="32dp">
+
+
+    <TextView
+        android:id="@+id/scannerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:gravity="center_vertical"
+        android:text="Scan your card"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:fontFamily="sans-serif-light"/>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="8dp"
+        android:text="Cancel"
+         />
+
+</FrameLayout>
+</merge>

@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Zippy Kiosk</string>
+
+    <string name="kiosk_mode_pref_title">Start Zippy Kiosk</string>
+    <string name="kiosk_mode_pref_summary">To exit Zippy Kiosk, tap the unlock pattern at the bottom of the screen.</string>
+    <string name="business_code_pref_title">Business Code</string>
+    <string name="connecting_please_Wait">"Connecting to Zippy\nPlease wait"</string>
+    <string name="registering">Registering this device</string>
+    <string name="failed_to_register_device">Could not register this device</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="cannot_checkin_offline">"Sorry, you can't check-in as Zippy is temporarily offline"</string>
+
+
+    <!-- Strings related to signup -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_server"></string>
+    <string name="action_signup">Sign up</string>
+    <string name="already_have_account_login">Already have an account? Log in.</string>
+    <string name="error_creating_new_account">Error creating new account</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_server">Server</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_invalid_email">Email address is invalid</string>
+    <string name="error_invalid_password">Minimum 4 characters</string>
+    <string name="error_invalid_email_password">Invalid email or password</string>
+
+    <string name="hint_email_user">Email Address</string>
+    <string name="hint_name_user">Name</string>
+    <string name="hint_postcode_user">PostCode</string>
+
+    <string name="choose_your_rewards">Choose your Rewards</string>
+    <string name="activate_card_to_claim_rewards">Activate your card online to claim rewards</string>
+    <string name="rewards">Rewards</string>
+    <string name="points_at">points at</string>
+    <string name="point_at">point at</string>
+    <string name="done">Done</string>
+
+    <string name="enter_email_prompt">Enter your email address to secure your points.</string>
+    <string name="change_email_title">Enter your Email Address</string>
+    <string name="enter_email_title">Enter Your Email to Secure Your Points</string>
+    <string name="email_changed_title">NEXT STEP - Please Check Your Email</string>
+    <string name="email_changed_message">To activate your account, please click the link in the email we sent to %s</string>
+
+    <string name="btn_enter_email">Enter Email</string>
+    <string name="btn_change_email">Change Email</string>
+    <string name="disabled_rewards_message">You cannot claim any more rewards until you activate your account, please click the link in the email we sent to %s</string>
+    <string name="noemail_disabled_rewards_message">You cannot claim any more rewards until you enter your email and activate your account</string>
+    <string name="forceemail_disabled_rewards_message">You cannot claim any rewards until you enter your email</string>
+    <string name="step1">Grab a card or the app</string>
+    <string name="step2">Tap &amp; scan your card</string>
+    <string name="step3">Earn points &amp; unlock rewards</string>
+
+    <string name="you_have_spent_points">You\'ve spent %1$d point%2$s claiming a</string>
+    <string name="you_spent_points">You spent %1$d point%2$s claiming a</string>
+    <string name="to_earn_points_today">To Earn Points Today</string>
+    <string name="your_points_balance">Your Points Balance</string>
+</resources>

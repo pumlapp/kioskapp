@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/zippy_bakground">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scan_header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="86dp"
+        android:background="@color/theme_primary"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+
+        <TextView
+            android:id="@+id/rewardsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_vertical"
+            android:text="Choose your Rewards"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/claim_history_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:focusable="false"
+            android:text="Claim History"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cancel_button"/>
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="8dp"
+            android:focusable="false"
+            android:text="Done"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/shaddowLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/scan_header_layout"
+        android:background="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shaddowLine"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1.8"
+            android:focusable="false"
+            card_view:cardCornerRadius="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:id="@+id/points_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/title_background_color"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:text="Earn Points"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/title_text_color"
+                    android:visibility="visible"/>
+
+                <Button
+                    android:id="@+id/spend_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:focusable="false"
+                    android:text="Add Your Spend Now"
+                    android:layout_marginTop="16dp"
+                    android:visibility="visible"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:background="@drawable/custom_btn"
+                    android:minHeight="62dp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/points_balance_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/your_points_balance"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/title_text_color"
+                    android:gravity="bottom|center_horizontal"
+                    />
+
+                <TextView
+                    android:id="@+id/totalPoints"
+                    android:layout_width="290dp"
+                    android:layout_height="290dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    tools:text="5"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/body_text_1_inverse"
+                    android:textSize="92sp"
+                    android:visibility="visible"
+                    android:background="@drawable/award_badge2"
+                    android:padding="32dp"
+                    android:layout_marginBottom="16dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/points_earned_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="32dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/you_earned_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="You earned"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/body_text_1" />
+
+                        <TextView
+                            android:id="@+id/points_earned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            tools:text="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/theme_primary"
+                            android:textSize="42sp" />
+
+                        <TextView
+                            android:id="@+id/points_at_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="point at"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/body_text_1" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/points_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        tools:text="business"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/body_text_1" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                card_view:cardCornerRadius="4dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/activation_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/holo_red_light"
+                        tools:text="An activation email has been sent to your email address, XXXXX please activate your account."
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/enter_email_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:visibility="visible"
+                        android:layout_toLeftOf="@+id/button_change_email"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/enter_email_prompt" />
+
+                    <Button
+                        android:id="@+id/button_resend_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activation_message"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toLeftOf="@+id/button_change_email"
+                        android:focusable="false"
+                        android:text="Resend"
+                        />
+
+                    <Button
+                        android:id="@+id/button_change_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/activation_message"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="8dp"
+                        android:focusable="false"
+                        android:text="Change Email" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_rewards"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                card_view:cardCornerRadius="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/listTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/title_background_color"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:text="Claim Rewards"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/title_text_color"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lst_rewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fadeScrollbars="false"
+                    android:focusable="false"
+
+                    android:scrollbars="vertical"
+                    android:clickable="false"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/points_earned_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:text="18"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/theme_primary"
+        android:textSize="64sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

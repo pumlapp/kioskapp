@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <Preference
+        android:key="pref_kiosk_mode"
+        android:title="@string/kiosk_mode_pref_title"
+        android:summary="@string/kiosk_mode_pref_summary" >
+    </Preference>
+
+
+    <PreferenceCategory
+        android:key="pref_account_group"
+        android:title="Zippy Account" >
+        <Preference
+            android:key="pref_account_details"
+            android:order="1"
+            />
+        <CheckBoxPreference
+            android:title="Always prompt for customer details"
+            android:defaultValue="false"
+            android:summary="Prompt customer on every checkin if they have not provided an email."
+            android:key="pref_account_force_email"
+            android:order="2" />
+        <ListPreference
+            android:title="Customer Details"
+            android:entries="@array/account_fields_names"
+            android:entryValues="@array/account_fields_values"
+            android:key="pref_account_fields"
+            android:defaultValue="0"
+            android:order="3" />
+        <Preference
+            android:key="pref_account_login"
+            android:title="Login"
+            android:order="4"
+            />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_about_group"
+        android:title="About ZippyKiosk" >
+        <Preference
+            android:key="about_zippykiosk"
+            android:summary="" >
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
