@@ -1,14 +1,19 @@
 package com.zippy.zippykiosk;
 
+import android.Manifest;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.Display;
 import android.view.Surface;
 import android.view.View;
@@ -66,6 +71,31 @@ public class ScannerActivity extends BaseActivity {
 
         mBarcodeView = (CompoundBarcodeView) findViewById(R.id.barcode_scanner);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                initCamera();
+            } else {
+                this.requestPermissions(new String[]{Manifest.permission.CAMERA}, 1234);
+            }
+        } else {
+            initCamera();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 1234) {
+            for (int i = 0; i < permissions.length; i++) {
+                if (permissions[i].equals(Manifest.permission.CAMERA)
+                        && grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                    initCamera();
+                }
+            }
+        }
+    }
+
+    private void initCamera() {
         CameraSettings settings = new CameraSettings();
         settings.setRequestedCameraId(1);
         settings.setContinuousFocusEnabled(true);

@@ -7,9 +7,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.PixelFormat;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -57,12 +59,26 @@ public abstract class BaseActivity extends Activity {
                 }
             });
         }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:" + getPackageName()));
+            startActivityForResult(intent, 1234);
+        } else {
+            init();
+        }
+    }
 
+    private void init() {
         // Set view over statusbar and navigationbar that intercepts onTouch events so use can't swipe for notification
         // or tap back, Home or recent soft keys. However, this doesn't work for navbar when keypad is up.
         WindowManager manager = ((WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE));
         final WindowManager.LayoutParams localLayoutParams = new WindowManager.LayoutParams();
-        localLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            localLayoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        } else {
+            localLayoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+        }
+
         localLayoutParams.gravity = Gravity.TOP;
 
 
@@ -109,7 +125,15 @@ public abstract class BaseActivity extends Activity {
         mChecker.run();
 
         ((KioskApp) getApplicationContext()).registerKioskModeScreenOffReceiver();
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1234) {
+            init();
+
+        }
     }
 
 

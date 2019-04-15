@@ -1,185 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/header_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="86dp"
-        android:background="@color/theme_primary"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp">
-
-
-        <TextView
-            android:id="@+id/screentitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center_vertical"
-            android:text="How it works"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white"
-            android:textSize="32sp" />
-
-        <Button
-            android:id="@+id/cancel_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="8dp"
-            android:text="Close" />
-
-    </FrameLayout>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
-        android:paddingTop="32dp"
-        android:paddingBottom="32dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <com.shamanland.fonticon.FontIconView
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:id="@+id/header_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="86dp"
+            android:background="@color/theme_primary"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp">
+
+
+            <TextView
+                android:id="@+id/screentitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:text="How it works"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="8dp"
+                android:text="Close" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="&#xf029;"
-            android:textSize="72dp"
-            tools:text="S"
-            android:id="@+id/icon"
-            android:paddingRight="64dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pick Up a Card"
-            android:textSize="42dp"
-            android:id="@+id/title"
-            android:layout_toRightOf="@+id/icon" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="There should be a stand with plastic cards next to this tablet. Pick one up its free!"
-            android:textSize="24dp"
-            android:id="@+id/textView"
-            android:layout_below="@+id/title"
-            android:layout_toRightOf="@+id/icon" />
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
-        android:paddingTop="32dp"
-        android:paddingBottom="32dp">
-
-        <com.shamanland.fonticon.FontIconView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="&#xf0a6;"
-            android:textSize="72dp"
-            tools:text="H"
-            android:id="@+id/icon2"
-            android:paddingRight="64dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tap the Tablet and Scan the QR code"
-            android:textSize="42dp"
-            android:id="@+id/title2"
-            android:layout_toRightOf="@+id/icon2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Now you have your card, tap the tablet and you will see a camera screen. Hold the qr code on your card over the camera to check-in."
-            android:textSize="24dp"
-            android:id="@+id/textView2"
-            android:layout_below="@+id/title2"
-            android:layout_toRightOf="@+id/icon2" />
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
-        android:paddingTop="32dp"
-        android:paddingBottom="32dp">
-
-        <com.shamanland.fonticon.FontIconView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="&#xf005;"
-            android:textSize="72dp"
-            tools:text="S"
-            android:id="@+id/icon3"
+            android:paddingLeft="64dp"
             android:paddingRight="64dp"
-            android:checked="false" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Earn Points"
-            android:textSize="42dp"
-            android:id="@+id/title3"
-            android:layout_toRightOf="@+id/icon3" />
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Each visit earns you points, so the more times you visit the more points you earn."
-            android:textSize="24dp"
-            android:id="@+id/textView3"
-            android:layout_below="@+id/title3"
-            android:layout_toRightOf="@+id/icon3" />
+            <com.shamanland.fonticon.FontIconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="&#xf029;"
+                android:textSize="72dp"
+                tools:text="S"
+                android:id="@+id/icon"
+                android:paddingRight="64dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Up a Card"
+                android:textSize="42dp"
+                android:id="@+id/title"
+                android:layout_toRightOf="@+id/icon" />
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
-        android:paddingTop="32dp"
-        android:paddingBottom="32dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="There should be a stand with plastic cards next to this tablet. Pick one up its free!"
+                android:textSize="24dp"
+                android:id="@+id/textView"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/icon" />
 
-        <com.shamanland.fonticon.FontIconView
-            android:layout_width="wrap_content"
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="&#xf091;"
-            android:textSize="72dp"
-            tools:text="R"
-            android:id="@+id/icon4"
+            android:paddingLeft="64dp"
             android:paddingRight="64dp"
-            android:checked="false" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Unlock and Choose Rewards "
-            android:textSize="42dp"
-            android:id="@+id/title4"
-            android:layout_toRightOf="@+id/icon4" />
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="After you have earned enough points you will be able to choose any rewards that you have unlocked."
-            android:textSize="24dp"
-            android:id="@+id/textView4"
-            android:layout_below="@+id/title4"
-            android:layout_toRightOf="@+id/icon4" />
+            <com.shamanland.fonticon.FontIconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="&#xf0a6;"
+                android:textSize="72dp"
+                tools:text="H"
+                android:id="@+id/icon2"
+                android:paddingRight="64dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap the Tablet and Scan the QR code"
+                android:textSize="42dp"
+                android:id="@+id/title2"
+                android:layout_toRightOf="@+id/icon2" />
 
-    </RelativeLayout>
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now you have your card, tap the tablet and you will see a camera screen. Hold the qr code on your card over the camera to check-in."
+                android:textSize="24dp"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/title2"
+                android:layout_toRightOf="@+id/icon2" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="64dp"
+            android:paddingRight="64dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp">
+
+            <com.shamanland.fonticon.FontIconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="&#xf005;"
+                android:textSize="72dp"
+                tools:text="S"
+                android:id="@+id/icon3"
+                android:paddingRight="64dp"
+                android:checked="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earn Points"
+                android:textSize="42dp"
+                android:id="@+id/title3"
+                android:layout_toRightOf="@+id/icon3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Each visit earns you points, so the more times you visit the more points you earn."
+                android:textSize="24dp"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/title3"
+                android:layout_toRightOf="@+id/icon3" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="64dp"
+            android:paddingRight="64dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp">
+
+            <com.shamanland.fonticon.FontIconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="&#xf091;"
+                android:textSize="72dp"
+                tools:text="R"
+                android:id="@+id/icon4"
+                android:paddingRight="64dp"
+                android:checked="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unlock and Choose Rewards "
+                android:textSize="42dp"
+                android:id="@+id/title4"
+                android:layout_toRightOf="@+id/icon4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After you have earned enough points you will be able to choose any rewards that you have unlocked."
+                android:textSize="24dp"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/title4"
+                android:layout_toRightOf="@+id/icon4" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

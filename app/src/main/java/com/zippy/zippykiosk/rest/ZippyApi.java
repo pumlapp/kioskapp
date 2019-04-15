@@ -46,7 +46,7 @@ import retrofit.converter.GsonConverter;
  */
 public class ZippyApi {
     public static final String ZIPPY_PRODUCTION_API_ENDPOINT = "https://api.zippy.com.au";
-    private static final String ZIPPY_STAGING_API_ENDPOINT = "https://staging.api.zippy.com.au";
+    private static final String ZIPPY_STAGING_API_ENDPOINT = "https://api.zippy.com.au";
     //public static final String ZIPPY_API_ENDPOINT = "http://test.dev/api"; // Localhost testing
     //public static final String ZIPPY_API_ENDPOINT = "http://tablettemp.api.zippy.com.au";
     public static final String ZIPPY_API_ENDPOINT = BuildConfig.DEBUG ? ZIPPY_STAGING_API_ENDPOINT : ZIPPY_PRODUCTION_API_ENDPOINT;
